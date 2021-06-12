@@ -61,6 +61,15 @@ namespace MvcSiteMapProvider.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The builder set instance named &apos;{0}&apos; was not found. Check your DI configuration to ensure a builder set instance with this name exists..
+        /// </summary>
+        internal static string NamedBuilderSetNotFound {
+            get {
+                return ResourceManager.GetString("NamedBuilderSetNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The sitemap loader may only be set in the Application_Start event of Global.asax and must not be set again. Set the &apos;MvcSiteMapProvider_UseExternalDIContainer&apos; in the AppSettings section of the web.config file to &apos;true&apos; if you are using an external dependency injection container..
         /// </summary>
         internal static string SiteMapLoaderAlreadySet {

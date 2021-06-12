@@ -1,4 +1,5 @@
-﻿using MvcSiteMapProvider.Loader;
+﻿using Microsoft.AspNetCore.Mvc;
+using MvcSiteMapProvider.Loader;
 using System;
 
 namespace MvcSiteMapProvider
