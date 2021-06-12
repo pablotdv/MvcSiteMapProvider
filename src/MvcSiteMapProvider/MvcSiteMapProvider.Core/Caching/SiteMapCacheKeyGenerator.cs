@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace MvcSiteMapProvider.Caching
@@ -11,13 +12,9 @@ namespace MvcSiteMapProvider.Caching
     public class SiteMapCacheKeyGenerator
         : ISiteMapCacheKeyGenerator
     {
-        public SiteMapCacheKeyGenerator(
-            IHttpContextAccessor mvcContextFactory
-            )
+        public SiteMapCacheKeyGenerator([NotNull] IHttpContextAccessor httpContextAccessor)
         {
-            if (mvcContextFactory == null)
-                throw new ArgumentNullException("mvcContextFactory");
-            this.mvcContextFactory = mvcContextFactory;
+            this.mvcContextFactory = httpContextAccessor;
         }
 
         protected readonly IHttpContextAccessor mvcContextFactory;
